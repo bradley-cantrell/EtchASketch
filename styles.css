@@ -1,6 +1,14 @@
 .canvas {
-    background-color: blue;
-    
-    
+    background-color: white;
+}
+
+.sketchpad {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+.painted {
+    background-color: purple;
 }
 
