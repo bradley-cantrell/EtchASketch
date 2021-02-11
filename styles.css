@@ -16,6 +16,10 @@
     background-color: purple;
 }
 
+.unpainted {
+    background-color: white;
+}
+
 .wrapper {
     margin: auto;
     width: 100%;
