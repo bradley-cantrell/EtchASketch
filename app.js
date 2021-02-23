@@ -4,12 +4,21 @@ const creationButton = document.getElementById("creation-button");
 const resetButton = document.getElementById("reset-button");
 const maxGridSize = 2500;
 
-//Prompts the user for input and converts that to the number of canvas divs that need to be made
+//Prompts the user for input and converts that to the number of columns the grid needs
+
 creationButton.addEventListener("click", function(){
-    var userInput = prompt("How many squares per side would you like your new grid to be?", "16");
-    var inputToInt = parseInt(userInput);
-    gridSize = inputToInt * inputToInt;
+    let userInput = prompt("How many squares per side would you like your new grid to be?", "16");
+    gridColumns = parseInt(userInput);
+    gridSize = gridColumns * gridColumns;
+    
   
+    function layoutGrid(gridColumns) {
+        const sketchpad = document.getElementById('sketchpad')
+        sketchpad.style.gridTemplateColumns = `repeat(${gridColumns}, 1fr)`
+        sketchpad.style.gridTemplateRows = `repeat(${gridColumns}, 1fr)`
+    }
+
+    layoutGrid(gridColumns);
     console.log(gridSize); //test logging, remove
     
     for(i=0;i<gridSize;i++){ //generates the canvas
@@ -45,4 +54,3 @@ resetButton.addEventListener("click", function(){
     const sketchpad = document.querySelector('#sketchpad');
     removeAllChildNodes(sketchpad);
 })
-
