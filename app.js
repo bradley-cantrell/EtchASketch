@@ -1,5 +1,5 @@
 
-//Creates a variable that selects our buttons
+//Creates variables that select our buttons
 const creationButton = document.getElementById("creation-button");
 const resetButton = document.getElementById("reset-button");
 const maxGridSize = 2500;
@@ -19,9 +19,9 @@ creationButton.addEventListener("click", function(){
     }
 
     layoutGrid(gridColumns);
-    console.log(gridSize); //test logging, remove
-    
-    for(i=0;i<gridSize;i++){ //generates the canvas
+
+
+    for(i=0;i<gridSize;i++){ //generates the canvas that can be painted
 
         let sketchpad = document.querySelector('#sketchpad'); 
     
@@ -45,7 +45,7 @@ creationButton.addEventListener("click", function(){
         
 })
 
-resetButton.addEventListener("click", function(){
+resetButton.addEventListener("click", function(){ //clears existing grid
     function removeAllChildNodes(parent) {
         while (parent.firstChild) {
             parent.removeChild(parent.firstChild);
