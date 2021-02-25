@@ -33,10 +33,6 @@ p {
     margin: auto;
 }
 
-.painted {
-    background-color: purple;
-}
-
 .unpainted {
     background-color: white;
 }
